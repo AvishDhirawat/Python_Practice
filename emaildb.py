@@ -9,7 +9,7 @@ cur.execute("DROP TABLE IF EXISTS Counts")
 cur.execute("CREATE TABLE Counts(email TEXT, count INTEGER)")
 
 fname = input('Enter the file name: ')
-if(len(fname) < 1): fname = 'Files_Misc/mbox-short.txt'
+if(len(fname) < 1): fname = 'Files_Misc/mbox.txt'
 fh = open(fname)
 for line in fh:
     if not line.startswith('From: '): continue

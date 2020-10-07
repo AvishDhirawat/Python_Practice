@@ -38,7 +38,8 @@ def lookup(d, key):
         if found:
             return child.text
         if child.tag == 'key' and child.text == key:
-            return None
+            found = True
+        return None
 
 stuff = ET.parse(fname)
 all = stuff.findall('dict/dict/dict')
